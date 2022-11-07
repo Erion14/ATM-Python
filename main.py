@@ -17,7 +17,8 @@ class bank(object):
                 am=int(input("Enter how much you want to deposit: "))
                 if am > 0:
                     self.balance += am
-                elif am<0:
+                    print(f"Your deposit has been succesful {self.balance}$")
+                elif am<=0:
                     print("You cant deposit negative numbers, please try again")
                     mybank.deposit()
                 break
@@ -48,6 +49,7 @@ class bank(object):
                     mybank.withdraw()
                 elif w <=balance:
                     self.balance = self.balance-w
+                    print(f"Your withdraw has been succesful {self.balance}$")
                 break
             except ValueError as e:
                 pass
